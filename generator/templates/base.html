@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Password Generator{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'generator/css/styles.css' %}">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="{% url 'home' %}">Password Generator</a>
+    </header>
+
+    <main class="page-shell">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>Built with Django, HTML, CSS, and a little JavaScript.</p>
+    </footer>
+
+    <script src="{% static 'generator/js/main.js' %}"></script>
+</body>
+</html>

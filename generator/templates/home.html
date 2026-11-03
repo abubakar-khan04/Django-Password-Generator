@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Password Generator{% endblock %}
+
+{% block content %}
+<section class="hero-card">
+    <div class="hero-content">
+        <p class="eyebrow">Secure password tool</p>
+        <h1>Create a strong password in seconds</h1>
+        <p class="hero-text">
+            Choose the length and character types, then generate a clean random password for your account.
+        </p>
+    </div>
+
+    <form class="generator-form" action="{% url 'generate-password' %}" method="get">
+        <label class="field-label" for="length">Password length</label>
+        <select id="length" name="length" class="select-field">
+            <option value="6">6 characters</option>
+            <option value="8">8 characters</option>
+            <option value="10">10 characters</option>
+            <option value="12">12 characters</option>
+            <option value="14">14 characters</option>
+            <option value="16" selected>16 characters</option>
+            <option value="20">20 characters</option>
+            <option value="24">24 characters</option>
+            <option value="32">32 characters</option>
+        </select>
+
+        <div class="option-grid">
+            <label class="option-card">
+                <input type="checkbox" name="lowercase" checked>
+                <span>Lowercase letters</span>
+            </label>
+
+            <label class="option-card">
+                <input type="checkbox" name="uppercase" checked>
+                <span>Uppercase letters</span>
+            </label>
+
+            <label class="option-card">
+                <input type="checkbox" name="numbers" checked>
+                <span>Numbers</span>
+            </label>
+
+            <label class="option-card">
+                <input type="checkbox" name="symbols" checked>
+                <span>Special characters</span>
+            </label>
+        </div>
+
+        <p class="form-note">Every selected character type is included. If none are selected, lowercase letters are used.</p>
+        <button class="primary-button" type="submit">Generate Password</button>
+    </form>
+</section>
+{% endblock %}
