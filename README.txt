@@ -127,17 +127,6 @@ These files should stay private or local:
 - __pycache__/
 - *.pyc
 
-Git Commands
-------------
-Run these commands inside the django_password_generator folder:
-
-git init
-git add .
-git commit -m "Initial Django password generator project"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
-git push -u origin main
-
 Notes
 -----
 - This project is for learning and local development.
